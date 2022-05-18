@@ -907,14 +907,21 @@ section.info-cont {
 /* modal */
 
 .modal {
-  position: absolute;
-  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+}
+
+.modal-feedback {
+  /* display: flex; */
   flex-wrap: wrap;
   background: var(--basic-white);
   width: 620px;
   height: 430px;
-  left: 393px;
-  top: 2369px;
   border-top: var(--basic-red) solid 7px;
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
@@ -931,7 +938,7 @@ section.info-cont {
   margin: 0 auto;
 
 }
-.modal form {
+.modal-feedback form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -949,13 +956,13 @@ section.info-cont {
 .feedback-text input {
   height: 100%;
 }
-.modal input{
+.modal-feedback input{
   width: 100%;
   box-sizing: border-box;
   padding: 7px 12px;
   margin-top: 11px;
 }
-.modal label {
+.modal-feedback label {
   font-size: 18px;
 }
 .modal-button-wrapper {
@@ -963,7 +970,7 @@ section.info-cont {
   align-items: center;
   /* text-align: center; */
 }
-.modal::before {
+.modal-feedback::before {
   background:0 0 no-repeat url("/img/icon/icon_close.svg");
   position: absolute;
   right: 11px;
@@ -973,13 +980,10 @@ section.info-cont {
   height: 21px;
 }
 .map-popup {
-  position: absolute;
   background-image:url(/img/map-popup.png);
   background-position: 47% 76%;
   width: 943px;
   height: 449px;
-  left: 240px;
-  bottom: 374px;
   border-top: var(--basic-red) solid 7px;
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
@@ -1062,8 +1066,15 @@ section.info-cont {
   display: flex;
 
 }
-svg.img-social:hover path {
-  fill: var(--basic-red);
+.img-social-list li {
+  width: 44px;
+  height: 44px;
+  margin: 2.5px;
+  border-radius: 50%;
+  background-color: var(--basic-navi-grey-click);
+}
+.img-social-list li:hover {
+  background-color: var(--basic-red);
 }
 
 
