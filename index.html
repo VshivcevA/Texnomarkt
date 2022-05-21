@@ -264,7 +264,7 @@
           <img class="img img-map" src="img/map-mini.png" width="300" height="158" alt="Карта">
           <img class="img img-map img-map-popup" src="img/map-popup.png" width="1736" height="779" alt="">
           <form>
-            <button class="button">Заблудились? НапиШИТЕ НАМ!</button>
+            <button class="button modal-feedback-show">Заблудились? НапиШИТЕ НАМ!</button>
           </form>
         </div>
         </section>
@@ -312,22 +312,28 @@
     <section class="modal modal-feedback">
       <h2 class="feedback visually-hidden">Обратная связь</h2>
         <form class="container-modal" action="https://echo.htmlacademy.ru" method="post">
-          <span class="feedback-name"><label for="name">Ваше имя:</label><br>
-          <input id="name" type="text" name="name" placeholder="Имя Фамилия"  aria-label="введите имя и фамилию"></span>
-          <span class="feedback-mail"><label for="email">Ваш e-mail:</label><br>
-          <input id="email" type="email" name="e-mail" placeholder="email@example.com" aria-label="введите почтовый адресс"></span>
-          <div class="feedback-text"><label for="text">Текст письма:</label><br>
-          <input id="text" type="text" name="text" placeholder="В свободной форме"></div>
+          <span class="feedback-name">
+            <label for="name">Ваше имя:</label><br>
+            <input id="name" type="text" name="name" placeholder="Имя Фамилия"  aria-label="введите имя и фамилию"></span>
+          <span class="feedback-mail">
+            <label for="email">Ваш e-mail:</label><br>
+            <input id="email" type="email" name="e-mail" placeholder="email@example.com" aria-label="введите почтовый адресс"></span>
+          <div class="feedback-text">
+            <label for="text">Текст письма:</label><br>
+            <input id="text" type="text" name="text" placeholder="В свободной форме"></div>
         </form>
         <div class="modal-button-wrapper">
-          <input class="button" type="submit" value="Отправить"  aria-label="отправить письмо">
+          <input class="button modal-feedback-submit" type="submit" value="Отправить"  aria-label="отправить письмо">
         </div>
+        <button class="modal-feedback-close" type="button">Закрыть</button>
     </section>
 
     <section class="modal map-popup">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.4112633329355!2d30.3163145583218!3d59.968267337863026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bc48a26c9%3A0x8a49e1486716f5b1!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDXQnywg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk3MDIy!5e0!3m2!1sru!2s!4v1652632997985!5m2!1sru!2s" width="943px" height="449px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <button class="modal-map-close" type="button">Закрыть</button>
     </section>
-
+    <script src="/js/modal-feedback.js"></script>
+    <script src="/js/modal-map.js"></script>
   </body>
 </html>
