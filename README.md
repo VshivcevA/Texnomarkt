@@ -1,2 +1,2 @@
 # texnomarkt
-Учебный проект HTML Academy на HTML
+Учебный проект HTML Academy на HTML/CSS
